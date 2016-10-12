@@ -2,7 +2,7 @@
 
 console.log('cheese and puppies');
 
-// TODO add onclick=  to html buttons
+let mathSentence = [];
 
 function add (x, y) {
   // console.log(x + y);
@@ -33,6 +33,7 @@ function calculate (x, y, cb) {
   return cb(x, y);
 }
 
-function makeArray() {
-  console.log('pizza-fart');
+function makeArray(value) {
+  mathSentence.push(value);
+  console.log(mathSentence);
 }
