@@ -28,6 +28,11 @@ body {
   flex-direction: column;
 }
 
+.number_div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
 
 .calc_buttons button {
   font-size: 30px;
