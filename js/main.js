@@ -28,9 +28,23 @@ function calculate (x, y, cb) {
   return cb(x, y);
 }
 
+// function togglePosNeg () {
+//   mathSentence.unshift(2);
+//   console.log(mathSentence);
+// }
+
 function makeArray(value) {
-  mathSentence += value;
-  document.querySelector('.answer').innerHTML = mathSentence;
+  // if(value === 'neg') {
+  //   if(value !== ' + ' || value !== ' - ')
+  //     mathSentence *= parseInt(-1);
+  //     // mathSentence.unshift('2');
+  //     console.log(mathSentence);
+  //     document.querySelector('.answer').innerHTML = mathSentence;
+  // }
+  // else {
+    mathSentence += value;
+    document.querySelector('.answer').innerHTML = mathSentence;
+  // }
 }
 
 function answer () {
