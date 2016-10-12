@@ -32,14 +32,41 @@ function calculate (x, y, cb) {
 function makeArray(value) {
   mathSentence.push(value);
   console.log(mathSentence);
+  document.querySelector('.answer').innerHTML = mathSentence.join(' ');
 }
 
 function answer () {
-  var x = mathSentence.slice(0,1).join('');
-  var cb = mathSentence.slice(1,2).join('');
-  var y = mathSentence.slice(2,3).join('');
-  console.log('x: ' + x);
-  console.log('y: ' + y);
-  console.log('cb: ' + cb);
-  calculate(x,y,cb);
+  var x = parseFloat(mathSentence[0]);
+  var y = parseFloat(mathSentence[2]);
+  let answer;
+  if(mathSentence[1] === '+') {
+    let cb = add;
+    console.log(calculate(x,y,cb));
+    answer = calculate(x, y, cb);
+  }
+  if(mathSentence[1] === '-') {
+    let cb = subtract;
+    console.log(calculate(x,y,cb));
+    answer = calculate(x, y, cb);
+  }
+  if(mathSentence[1] === '*') {
+    let cb = multiply;
+    console.log(calculate(x,y,cb));
+    answer =  calculate(x, y, cb);
+  }
+  if(mathSentence[1] === '/') {
+    let cb = divide;
+    console.log(calculate(x,y,cb));
+    answer =  calculate(x, y, cb);
+  }
+  if(mathSentence[1] === '%') {
+    let cb = remainder;
+    console.log(calculate(x,y,cb));
+    answer =  calculate(x, y, cb);
+  }
+  document.querySelector('.answer').innerHTML = answer;
 }
+
+function reload() {
+  location.reload(true);
+};

@@ -6,7 +6,12 @@
     <link rel="stylesheet" href="./styles/master.css">
   </head>
   <body>
+
+    <div class="answer">
+    </div>
+
   <div class='calc_buttons'>
+
     <div class='number_div'>
       <div class='row_1'>
         <button type="button" class="calc_num" value="1" onmousedown="makeArray(value)">1</button>
@@ -28,19 +33,21 @@
 
       <div class='row_4'>
         <button type="button" class="calc_num" value="0" onmousedown="makeArray(value)">0</button>
+        <button type="button" class="total" value="clear" onmousedown="reload()">AC</button>
         <button type="button" class="total" value="=" onmousedown="answer()">=</button>
       </div>
     </div> <!-- ends numbers div  -->
 
     <div class='column_op'>
-      <button type="button" class="calc_op" value="add" onmousedown="makeArray(value)">+</button>
-      <button type="button" class="calc_op" value="subtract" onmousedown="makeArray(value)">-</button>
-      <button type="button" class="calc_op" value="multiply" onmousedown="makeArray(value)">*</button>
-      <button type="button" class="calc_op" value="divide)" onmousedown="makeArray(value)">/</button>
-      <button type="button" class="calc_op" value="remainder" onmousedown="makeArray(value)">%</button>
+      <button type="button" class="calc_op" value="+" onmousedown="makeArray(value)">+</button>
+      <button type="button" class="calc_op" value="-" onmousedown="makeArray(value)">-</button>
+      <button type="button" class="calc_op" value="*" onmousedown="makeArray(value)">*</button>
+      <button type="button" class="calc_op" value="/" onmousedown="makeArray(value)">/</button>
+      <button type="button" class="calc_op" value="%" onmousedown="makeArray(value)">%</button>
     </div>
 
   </div>   <!-- ends calc_buttons -->
+
 
 
     <script type="text/javascript" src='js/main.js'>
